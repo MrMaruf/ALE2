@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ALE2_library.models.Automaton">
+    <Position X="1" Y="0.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAgAEAEIAEABQABAAEAgAAACIAEACgADAAgAAg=</HashCode>
+      <FileName>models\Automaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.models.Node">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAACAAAAAg=</HashCode>
+      <FileName>models\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.models.Transition">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACACAAAAIgAAAAAAAAQAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\Transition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
