@@ -1,0 +1,23 @@
+# comment
+
+alphabet: tes 
+stack: x
+states: TS1,TS2
+final: TS1 
+
+transitions:
+TS2,t --> TS1 
+TS2,e --> TS1
+TS1,s --> TS2 
+TS1,t --> TS2
+TS1,e --> TS2
+end.
+
+dfa:y 
+finite:n 
+
+words:
+test, y
+set, y
+sit, n
+end.

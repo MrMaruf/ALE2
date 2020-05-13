@@ -1,4 +1,4 @@
-# automaton for regular expression (a|b)* 
+# comment
 
 alphabet: abc 
 stack: x
