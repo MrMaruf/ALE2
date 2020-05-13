@@ -9,18 +9,18 @@ namespace ALE2_library.models
     {
         private Node start;
         private Node end;
-        private char letter;
+        private string letter;
 
-        public Transition(char letter, Node start, Node end)
+        public Transition(string letter, Node start, Node end)
         {
             this.start = start;
             this.end = end;
             this.letter = letter;
         }
 
-        public System.Tuple<char, Node, Node> Path
+        public System.Tuple<string, Node, Node> Path
         {
-            get => new Tuple<char, Node, Node>(letter, start, end);
+            get => new Tuple<string, Node, Node>(letter, start, end);
             set
             {
                 letter = value.Item1;
@@ -31,17 +31,30 @@ namespace ALE2_library.models
 
         public Node Start
         {
-            get => default;
+            get => start;
         }
 
         public Node End
         {
-            get => default;
+            get => end;
         }
 
-        public int Letter
+        public string Letter
         {
-            get => default;
+            get => letter;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Transition transition &&
+                   EqualityComparer<Node>.Default.Equals(start, transition.start) &&
+                   EqualityComparer<Node>.Default.Equals(end, transition.end) &&
+                   letter == transition.letter;
+        }
+
+        public override string ToString()
+        {
+            return start.Name + "," + letter + " --> " + end.Name;
         }
     }
 }

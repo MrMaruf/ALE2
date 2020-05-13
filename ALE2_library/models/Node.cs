@@ -15,6 +15,11 @@ namespace ALE2_library.models
             this.name = name;
             this.transitions = transitions;
         }
+        public Node(string name)
+        {
+            this.name = name;
+            this.transitions = new List<Transition>();
+        }
 
         public string Name
         {
@@ -27,11 +32,21 @@ namespace ALE2_library.models
 
         public List<Transition> Transitions
         {
-            get => default;
+            get => transitions;
             set
             {
                 this.transitions = value;
             }
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Node)
+            {
+                Node node = (Node)obj;
+                return this.name.Equals(node.name);
+            }
+            else return false;
         }
     }
 }
