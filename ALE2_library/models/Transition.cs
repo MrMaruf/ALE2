@@ -56,5 +56,9 @@ namespace ALE2_library.models
         {
             return start.Name + "," + letter + " --> " + end.Name;
         }
+        public string ToStringGrapViz(string extra = "")
+        {
+            return "\""+start.Name + "\" -> \"" + end.Name+ "\" [label=\"" + letter + extra + "\"]";
+        }
     }
 }

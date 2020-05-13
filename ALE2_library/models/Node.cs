@@ -48,5 +48,14 @@ namespace ALE2_library.models
             }
             else return false;
         }
+
+        public override string ToString()
+        {
+            return name;
+        }
+        public string ToStringGraphViz(string shape)
+        {
+            return "\""+name+"\" [shape="+shape+"]";
+        }
     }
 }
