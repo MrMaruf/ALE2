@@ -1,0 +1,9 @@
+digraph myAutomaton {
+rankdir=LR;
+"" [shape=none]
+"q0" [shape=circle]
+"q1" [shape=doublecircle]
+
+"" -> "q0"
+"q0" -> "q1" [label="_"]
+}

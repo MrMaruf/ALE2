@@ -60,6 +60,7 @@
     <Compile Include="services\GVgeneratorTests.cs" />
     <Compile Include="services\IdentifierDFATests.cs" />
     <Compile Include="services\ParserTests.cs" />
+    <Compile Include="services\RegexReaderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -73,6 +74,12 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="materials\graphvizInput.txt" />
+    <Content Include="materials\input4.txt" />
+    <Content Include="materials\input5.txt" />
+    <Content Include="materials\input6.txt" />
+    <Content Include="materials\input7.txt" />
+    <Content Include="materials\input8.txt" />
+    <Content Include="materials\input3.txt" />
     <Content Include="materials\input2.txt" />
     <Content Include="materials\input.txt" />
   </ItemGroup>

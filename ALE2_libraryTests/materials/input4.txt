@@ -1,0 +1,14 @@
+# comment
+
+alphabet: ab
+stack: x
+states: q0,q1,q2,qf
+final: qf
+
+transitions:
+q0,a --> q1,
+q0,b --> q2,
+q2,_ --> qf,
+q1,_ --> qf,
+end.
+

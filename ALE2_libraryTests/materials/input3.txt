@@ -1,0 +1,20 @@
+# comment
+
+alphabet: zhq
+stack: x
+states: q0,q1,q2,q3,q4,q5,q6,qf
+final: qf
+
+transitions:
+q0,z --> q1,
+q1,h --> q2,
+q2,_ --> q3,
+q1,_ --> q4,
+q4,q --> q5,
+q5,z --> q6,
+q6,_ --> q4,
+q1,_ --> qf,
+q3,_ --> qf,
+q6,_ --> qf,
+end.
+

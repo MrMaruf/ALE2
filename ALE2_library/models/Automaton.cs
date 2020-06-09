@@ -21,31 +21,13 @@ namespace ALE2_library.models
         private bool finite;
 
         public Automaton(
-            List<string> alphabet, 
-            List<Node> states, 
-            List<Node> final, 
-            List<Transition> transitions, 
-            bool initialDFA, 
-            bool initialFinite, 
-            List<string> words)
-        {
-            this.alphabet = alphabet;
-            this.states = states;
-            this.final = final;
-            this.transitions = transitions;
-            this.initialDFA = initialDFA;
-            this.initialFinite = initialFinite;
-            this.words = words;
-        }
-
-        public Automaton(
                    List<string> alphabet,
                    List<Node> states,
                    List<Node> final,
                    List<Transition> transitions,
-                   bool initialDFA,
-                   bool initialFinite,
-                   List<string> words, string stack)
+                   bool initialDFA = false,
+                   bool initialFinite = false,
+                   List<string> words = null, string stack = null)
         {
             this.alphabet = alphabet;
             this.states = states;

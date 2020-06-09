@@ -48,6 +48,7 @@
     <Compile Include="services\Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="models\Transition.cs" />
+    <Compile Include="services\RegexReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="base_classes.cd" />

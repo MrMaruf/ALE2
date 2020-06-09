@@ -1,0 +1,15 @@
+digraph myAutomaton {
+rankdir=LR;
+"" [shape=none]
+"q0" [shape=circle]
+"q1" [shape=doublecircle]
+"q2" [shape=circle]
+"q3" [shape=circle]
+
+"" -> "q0"
+"q0" -> "q1" [label="_"]
+"q0" -> "q2" [label="_"]
+"q2" -> "q3" [label="a"]
+"q3" -> "q1" [label="_"]
+"q3" -> "q2" [label="_"]
+}

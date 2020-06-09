@@ -37,6 +37,7 @@ namespace ALE2_library.models
         public Node End
         {
             get => end;
+            set => end = value;
         }
 
         public string Letter
@@ -54,11 +55,11 @@ namespace ALE2_library.models
 
         public override string ToString()
         {
-            return start.Name + "," + letter + " --> " + end.Name;
+            return (start is null ? "*null*" : start.Name) + "," + letter + " --> " + (end is null ? "*null*" : end.Name);
         }
         public string ToStringGrapViz(string extra = "")
         {
-            return "\""+start.Name + "\" -> \"" + end.Name+ "\" [label=\"" + letter + extra + "\"]";
+            return "\""+ (start is null ? "*null*" : start.Name) + "\" -> \"" + (end is null ? "*null*" : end.Name) + "\" [label=\"" + letter + extra + "\"]";
         }
     }
 }
