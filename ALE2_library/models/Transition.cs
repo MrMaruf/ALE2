@@ -59,7 +59,7 @@ namespace ALE2_library.models
         }
         public string ToStringGrapViz(string extra = "")
         {
-            return "\""+ (start is null ? "*null*" : start.Name) + "\" -> \"" + (end is null ? "*null*" : end.Name) + "\" [label=\"" + letter + extra + "\"]";
+            return "\""+ (start is null ? "*null*" : start.Name) + "\" -> \"" + (end is null ? "*null*" : end.Name) + "\" [label=\"" + (letter == "_"? "ε" : letter) + extra + "\"]";
         }
     }
 }

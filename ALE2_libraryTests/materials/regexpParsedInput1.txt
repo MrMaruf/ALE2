@@ -8,10 +8,10 @@ rankdir=LR;
 "q4" [shape=doublecircle]
 
 "" -> "q0"
-"q0" -> "q1" [label="_"]
-"q0" -> "q2" [label="_"]
+"q0" -> "q1" [label="ε"]
+"q0" -> "q2" [label="ε"]
 "q2" -> "q3" [label="a"]
-"q3" -> "q1" [label="_"]
-"q3" -> "q2" [label="_"]
+"q3" -> "q1" [label="ε"]
+"q3" -> "q2" [label="ε"]
 "q1" -> "q4" [label="b"]
 }

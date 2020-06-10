@@ -5,5 +5,5 @@ rankdir=LR;
 "q1" [shape=doublecircle]
 
 "" -> "q0"
-"q0" -> "q1" [label="_"]
+"q0" -> "q1" [label="ε"]
 }
