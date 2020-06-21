@@ -1,7 +1,6 @@
 # comment
 
 alphabet: tes 
-stack: x
 states: TS1,TS2
 final: TS1 
 

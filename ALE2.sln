@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALE2_library", "ALE2_librar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALE2_libraryTests", "ALE2_libraryTests\ALE2_libraryTests.csproj", "{9793F2ED-7D3C-4427-B759-3A2513D558D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ale2_Interface", "Ale2_Interface\Ale2_Interface.csproj", "{888C44E1-9F28-4FE6-A217-78A5CECF7A4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9793F2ED-7D3C-4427-B759-3A2513D558D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9793F2ED-7D3C-4427-B759-3A2513D558D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9793F2ED-7D3C-4427-B759-3A2513D558D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888C44E1-9F28-4FE6-A217-78A5CECF7A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888C44E1-9F28-4FE6-A217-78A5CECF7A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888C44E1-9F28-4FE6-A217-78A5CECF7A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888C44E1-9F28-4FE6-A217-78A5CECF7A4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

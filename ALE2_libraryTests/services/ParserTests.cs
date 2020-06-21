@@ -16,6 +16,7 @@ namespace ALE2_library.services.Tests
         static Node testNode1 = new Node("TS1");
         static Node testNode2 = new Node("TS2");
         static Transition testTransition1 = new Transition("t", testNode1, testNode2);
+        static Transition testTransition2 = new Transition("t", testNode1, testNode2, "_", "_");
         static string testInputPath1 = "../../materials/input.txt";
         static string testInputPath2 = "../../materials/input2.txt";
         
@@ -32,7 +33,7 @@ namespace ALE2_library.services.Tests
         public void parseTransitionLine_takesStringLineAndNodeList_returnFilledInTransition()
         {
             Transition expectedResponse = testTransition1;
-            string testInput = "TS1,t --> TS2";
+            string testInput = "TS1,t[_,_] --> TS2";
             List<Node> testStates = new List<Node>(new Node[] { testNode1, testNode2 });
 
             Transition testResult = Parser.parseTransitionLine(testInput, testStates);
@@ -40,7 +41,32 @@ namespace ALE2_library.services.Tests
             Assert.AreEqual(expectedResponse, testResult,
                 "Test node: " + testResult.Start.Name + "," + testResult.Letter + " --> " + testResult.End.Name);
         }
+        [TestMethod()]
+        public void parseTransitionLine_takesStringLineWithStackAndNodeList_returnFilledInTransitionWithStackElements()
+        {
+            Transition expectedResponse = testTransition2;
+            List<string> inputStack = new List<string>(new string[]{"x"});
+            string testInput = "TS1,t[_,_] --> TS2";
+            List<Node> testStates = new List<Node>(new Node[] { testNode1, testNode2 });
+            
+            Transition testResult = Parser.parseTransitionLine(testInput, testStates, inputStack);
 
+            Assert.AreEqual(expectedResponse, testResult,
+                "Test node: " + testResult.Start.Name + "," + testResult.Letter + " --> " + testResult.End.Name);
+        }
+        [TestMethod()]
+        [ExpectedException(typeof(Exception),
+            "Put or Take or both strings are NOT part of the stack!")]
+        public void parseTransitionLine_takesStringLineWithWrongStackAndNodeList_ThrowsException()
+        {
+            Transition expectedResponse = testTransition2;
+            List<string> inputStack = new List<string>(new string[] { "x" });
+            string testInput = "TS1,t[x,y] --> TS2";
+            List<Node> testStates = new List<Node>(new Node[] { testNode1, testNode2 });
+
+            Transition testResult = Parser.parseTransitionLine(testInput, testStates, inputStack);
+
+        }
         [TestMethod()]
         public void parseAlphabetLine_takesStringLine_returnsListOfStringsContainingAlphabet()
         {

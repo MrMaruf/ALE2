@@ -10,6 +10,11 @@ namespace ALE2_library.services
 {
     public class GVgenerator
     {
+        public static void generateGraph(Automaton automaton, string outputPath)
+        {
+            generateGraphVizInput(automaton, outputPath + ".txt");
+            generateGraph(outputPath + ".txt", outputPath);
+        }
         public static void generateGraphVizInput(Automaton automaton, string path)
         {
             List<string> lines = new List<string>();

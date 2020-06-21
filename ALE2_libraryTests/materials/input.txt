@@ -1,7 +1,6 @@
 # comment
 
 alphabet: abc 
-stack: x
 states: S1,S2,S3,S4 
 final: S3,S4 
 

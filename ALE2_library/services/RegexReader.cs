@@ -19,7 +19,7 @@ namespace ALE2_library.services
 
             indexerReset();
             Automaton automaton;
-            List<string> alphabet = expression.Split().ToList().FindAll(x => !"(,)|*._".Contains(x));
+            List<string> alphabet = expression.ToCharArray().ToList().ConvertAll(x=>x.ToString()).FindAll(x => !"(,)|*._".Contains(x));
             List<Node> states = new List<Node>();
             List<Node> final = new List<Node>();
             List<Transition> transitions = new List<Transition>();
@@ -35,8 +35,10 @@ namespace ALE2_library.services
             final.Add(latestNode); // get final state
             states.ForEach(x => // adds respective transitions to each state
             {
+                x.Name = x.Name.Substring(1);
                 x.Transitions.AddRange(transitions.FindAll(t => t.Start.Equals(x) || t.End.Equals(x)));
             });
+            alphabet = alphabet.Distinct().ToList();
             automaton = new Automaton(alphabet, states, final, transitions);
             return automaton;
 

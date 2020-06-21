@@ -1,7 +1,6 @@
 # comment
 
 alphabet: 
-stack: x
 states: q0,qf
 final: qf
 

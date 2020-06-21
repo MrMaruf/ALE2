@@ -46,6 +46,7 @@
       <HintPath>..\packages\MSTest.TestFramework.2.0.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -57,10 +58,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\DFAConverterTests.cs" />
+    <Compile Include="services\FiniteCheckerTests.cs" />
     <Compile Include="services\GVgeneratorTests.cs" />
     <Compile Include="services\IdentifierDFATests.cs" />
     <Compile Include="services\ParserTests.cs" />
     <Compile Include="services\RegexReaderTests.cs" />
+    <Compile Include="services\StackCheckerTests.cs" />
+    <Compile Include="services\WordCheckerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -74,6 +79,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="materials\graphvizInput.txt" />
+    <Content Include="materials\NDFAinputConverted.txt" />
+    <Content Include="materials\NDFAinput.txt" />
     <Content Include="materials\input4.txt" />
     <Content Include="materials\input5.txt" />
     <Content Include="materials\input6.txt" />
@@ -82,6 +89,8 @@
     <Content Include="materials\input3.txt" />
     <Content Include="materials\input2.txt" />
     <Content Include="materials\input.txt" />
+    <Content Include="materials\pda_input2.txt" />
+    <Content Include="materials\pda_input.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

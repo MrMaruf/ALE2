@@ -16,7 +16,7 @@ namespace ALE2_library.models
         private bool initialFinite;
         private List<string> words;
         private List<Tuple<string, bool, bool>> wordsShowcase;
-        private string stack;
+        private List<string> stack;
         private bool dfa;
         private bool finite;
 
@@ -27,7 +27,7 @@ namespace ALE2_library.models
                    List<Transition> transitions,
                    bool initialDFA = false,
                    bool initialFinite = false,
-                   List<string> words = null, string stack = null)
+                   List<string> words = null, List<string> stack = null)
         {
             this.alphabet = alphabet;
             this.states = states;
@@ -46,7 +46,7 @@ namespace ALE2_library.models
         public bool InitialDFA { get => initialDFA;}
         public bool InitialFinite { get => initialFinite;}
         public List<string> Words { get => words; set => words = value; }
-        public string Stack { get => stack; set => stack = value; }
+        public List<string> Stack { get => stack; set => stack = value; }
         public bool DFA { get => dfa; set => dfa = value; }
         public bool Finite { get => finite; set => finite = value; }
         public List<Tuple<string, bool, bool>> WordsShowcase { get => wordsShowcase; set => wordsShowcase = value; }
@@ -75,6 +75,7 @@ namespace ALE2_library.models
             message += "\n\ntransitions: \n";
             transitions.ForEach(x => message += x.ToString()+"\n");
             message += "end.\n\ndfa: " + (initialDFA ? "y" : "n") + "\nfinite: " + (initialFinite ? "y" : "n") + "\n\nwords: \n";
+            if(words!=null)
             words.ForEach(x => message += x + "\n");
             message += "end";
             return message;

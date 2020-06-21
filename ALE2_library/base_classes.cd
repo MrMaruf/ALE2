@@ -1,24 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ALE2_library.models.Automaton">
-    <Position X="1" Y="0.75" Width="3.75" />
+    <Position X="2.75" Y="1" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAgAEAEIAEABQABAAEAgAAACIAEACgADAAgAAg=</HashCode>
+      <HashCode>AAAAQAAgAEAEKAEEhQgBAAEAgAAACIAEACgADAAgAAg=</HashCode>
       <FileName>models\Automaton.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ALE2_library.models.Node">
-    <Position X="5.5" Y="2.75" Width="1.5" />
+    <Position X="6.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAACAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAQAAAAEAAAAAAAICAAAAAg=</HashCode>
       <FileName>models\Node.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ALE2_library.models.Transition">
-    <Position X="8" Y="3.25" Width="1.5" />
+    <Position X="9" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAACACAAAAIgAAAAAAAAQAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAACACAABAIkhAQAAAEAQAAAAEBAAAAAAAEAAAA=</HashCode>
       <FileName>models\Transition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.services.DFAConverter">
+    <Position X="15" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAACAAAAAAAAAAAAAIEAAAAAAgAAAAAAQA=</HashCode>
+      <FileName>services\DFAConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.services.FiniteChecker">
+    <Position X="12.25" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>services\FiniteChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.services.GVgenerator">
+    <Position X="15.25" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>services\GVgenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.services.IdentifierDFA">
+    <Position X="17.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>services\IdentifierDFA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.services.Parser">
+    <Position X="15.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAAAAAAAAAAAAAQAIAAAAQAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>services\Parser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.services.RegexReader">
+    <Position X="17.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAMAAAAgAAAAAAIAAAAAQAAAAAAIiAAAAAAQ=</HashCode>
+      <FileName>services\RegexReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.services.StackChecker">
+    <Position X="12.25" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>services\StackChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ALE2_library.services.WordChecker">
+    <Position X="12.75" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>services\WordChecker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

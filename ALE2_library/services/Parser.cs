@@ -19,7 +19,7 @@ namespace ALE2_library.services
             bool initialDFA = false;
             bool initialFinite = false;
             List<string> words = new List<string>();
-
+            List<string> stack = null;
             List<string> lines = File.ReadAllLines(path).ToList();
             for (int i = 0; i < lines.Count; i++)
             {
@@ -28,7 +28,8 @@ namespace ALE2_library.services
                 
                 if (line.Contains("#")) // ignoring comments
                     continue;
-
+                if (line.Contains("stack"))
+                    stack = parseAlphabetLine(line);
                 if (line.Contains("alphabet"))
                     alphabet = parseAlphabetLine(line);
                 else if (line.Contains("states"))
@@ -42,7 +43,7 @@ namespace ALE2_library.services
                         line = lines[++i];
                         if (line.Contains("end"))
                             break;
-                        transitions.Add(parseTransitionLine(line, states));
+                        transitions.Add(parseTransitionLine(line, states, stack));
                     }
                 }
                 else if (line.Contains("dfa"))
@@ -60,19 +61,31 @@ namespace ALE2_library.services
                     }
                 }
             }
-            Automaton automaton = new Automaton(alphabet, states, final, transitions, initialDFA, initialFinite, words);
+            Automaton automaton = new Automaton(alphabet, states, final, transitions, initialDFA, initialFinite, words, stack);
             return automaton;
         }
 
-        public static Transition parseTransitionLine(string line, List<Node> states)
+        public static Transition parseTransitionLine(string line, List<Node> states, List<string> stack = null)
         {
             Transition newTransition;
 
             // removes whitespaces
-            string letter = line.Split(',')[1].Split('-')[0].Trim();
+            string letter = line.Split(',')[1][0].ToString();
             Node start = states.Find(x => x.Name == line.Split(',')[0]);
             Node end = states.Find(x => x.Name == line.Split('>')[1].Trim());
             newTransition = new Transition(letter, start, end);
+
+            if (!(stack is null))
+            {
+                string take = line.Split('[')[1][0].ToString();
+                string put = line.Split(']')[0].Last().ToString();
+                if ((stack.Contains(take) || take == "_") && (stack.Contains(put) || put == "_"))
+                {
+                    newTransition.TakeFromStack = take;
+                    newTransition.PutOnStack = put;
+                }
+                else throw  new Exception("Put or Take or both strings are NOT part of the stack!");
+            }
             start.Transitions.Add(newTransition);
             end.Transitions.Add(newTransition);
             return newTransition;

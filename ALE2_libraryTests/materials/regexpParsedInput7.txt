@@ -1,11 +1,11 @@
 digraph myAutomaton {
 rankdir=LR;
 "" [shape=none]
-"q0" [shape=circle]
-"q1" [shape=circle]
-"q2" [shape=doublecircle]
+"0" [shape=circle]
+"1" [shape=circle]
+"2" [shape=doublecircle]
 
-"" -> "q0"
-"q0" -> "q1" [label="a"]
-"q1" -> "q2" [label="b"]
+"" -> "0"
+"0" -> "1" [label="a"]
+"1" -> "2" [label="b"]
 }
